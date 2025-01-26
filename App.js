@@ -1,10 +1,12 @@
-const express = require("express");
-const app = express();
-const port = 3000;
-const mongoose = require("mongoose");
-const Login = require("./model/Loginpage");
+import express from "express";
+import mongoose from "mongoose";
+import Login from "./model/Loginpage.js";
+
+const PORT = 3000;
 
 mongoose.connect("mongodb://localhost/login");
+
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -17,19 +19,17 @@ app.get("/", (req, res) => {
 
 app.post("/user", async (req, res) => {
   const { username, password } = req.body;
+
   const existcheck = await Login.findOne({ username: username });
-  if (existcheck != null) {
-    console.log("username already exists");
-    res.json({ exists: true });
-  } else {
-    const NewUser = new Login({ username, password });
-    NewUser.save()
-      .then(() => res.json({ created: true }))
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json({ created: false });
-      });
-  }
+  if (existcheck != null) return res.json({ exists: true });
+
+  const NewUser = new Login({ username, password });
+  NewUser.save()
+    .then(() => res.status(201).json({ created: true }))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ created: false });
+    });
 });
 
 app.post("/login", async (req, res) => {
@@ -39,11 +39,10 @@ app.post("/login", async (req, res) => {
       username: username,
       password: password,
     });
-    if (valid != null) {
-      res.json({ valid: true });
-    } else {
-      res.status(500).json({ valid: false });
-    }
+
+    if (valid != null) return res.json({ valid: true });
+
+    res.status(404).json({ valid: false });
   } catch (err) {
     console.log(err);
   }
@@ -55,9 +54,11 @@ app.get("/signup", (req, res) => {
 
 app.get("/welcome", (req, res) => {
   const username = req.query.username;
+  if (!username) res.redirect("/");
+
   res.render("welcome", { username: username });
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
