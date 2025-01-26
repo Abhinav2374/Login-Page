@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Login</title>
   </head>
-
   <body>
     <div id="box">
-      <h1 id="h1">Login Form</h1>
-      <label id="Username1"> Username: </label> <br />
-      <input id="username" placeholder="Enter your username" required /> <br />
-      <span id="username_error" class="error"
-        >The username must contain atleast 8 characters!</span
-      >
+      <h1>Login Form</h1>
+      <label> Username: </label> <br />
+      <input id="username" placeholder="Enter your username" type="text" />
       <br />
-      <label id="Password1">Password:</label> <br />
+      <span id="username_error" class="error"></span>
+
+      <br />
+
+      <label>Password:</label> <br />
       <input id="password" type="password" placeholder="Enter your password" />
-      <span id="password_error" class="error"
-        >The password must contain atleast 8 characters!</span
-      >
+      <span id="password_error" class="error"></span>
       <br />
-      <input id="remember" type="checkbox" />
-      <label for="remember me"> Remember</label> <br />
-      <a id="signUp" href="/signup">dont have an account? sign up</a>
-      <input id="login" type="submit" value="Login" />
+
+      <a href="/signup">dont have an account? sign up</a>
+      <input id="login" type="submit" value="Login" onclick="handleLogin()" />
     </div>
-    <script src="login.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
