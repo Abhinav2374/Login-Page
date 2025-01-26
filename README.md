@@ -21,10 +21,12 @@ This project was built for learning purposes to:
 ## **How It Works**
 
 1. **Signup:**
+
    - A user can register by providing a username and password.
    - The username is checked for uniqueness in the database.
 
 2. **Login:**
+
    - A registered user can log in with valid credentials.
    - On successful login, they are redirected to a welcome page.
 
@@ -34,23 +36,31 @@ This project was built for learning purposes to:
 ## **Running the Project**
 
 1. Clone the repository and install the required npm packages:
+
    ```bash
    git clone https://github.com/Abhinav2374/Login-Page.git
    cd Login-Page
    npm install
 
+   ```
+
 2. Run the Apllication
+
    ```bash
-   node App.js
+   npm start
+
+   ```
 
 3. Access the application
-    ```bash
+   ```bash
    http://localhost:3000
+   ```
 
 ## **DISCLAIMER**
 
 This project is for learning purposes only and is not production-ready.
 It lacks critical security features such as:
+
 - Password hashing
 - Input sanitization
 - Secure authentication mechanisms
