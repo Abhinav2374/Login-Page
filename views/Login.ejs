@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div id="box">
+      <h1 id="h1">Login Form</h1>
+      <label id="Username1"> Username: </label> <br />
+      <input id="username" placeholder="Enter your username" required /> <br />
+      <span id="username_error" class="error"
+        >The username must contain atleast 8 characters!</span
+      >
+      <br />
+      <label id="Password1">Password:</label> <br />
+      <input id="password" type="password" placeholder="Enter your password" />
+      <span id="password_error" class="error"
+        >The password must contain atleast 8 characters!</span
+      >
+      <br />
+      <input id="remember" type="checkbox" />
+      <label for="remember me"> Remember</label> <br />
+      <a id="signUp" href="/signup">dont have an account? sign up</a>
+      <input id="login" type="submit" value="Login" />
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

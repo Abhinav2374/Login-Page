@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div id="box">
+      <h1 id="h1">Login Form</h1>
+      <label id="Username1"> Username: </label> <br />
+      <input id="username" placeholder="Enter your username" required /> <br />
+      <span id="username_error" class="error"
+        >The username must contain atleast 8 characters!</span
+      >
+      <label id="Password1">Password:</label> <br />
+      <input id="password" type="password" placeholder="Enter your password" />
+      <label id="Password2">Confirm Password:</label> <br />
+      <input
+        id="confirmPassword"
+        type="password"
+        placeholder="Confirm your password"
+      />
+      <span id="password_error" class="error"
+        >The password must contain atleast 8 characters!</span
+      >
+      <br />
+      <a id="signIn" href="/">already have an account? sign in</a>
+      <input id="SignUp" type="submit" value="Sign Up" />
+    </div>
+    <script src="signUp.js"></script>
+  </body>
+</html>
