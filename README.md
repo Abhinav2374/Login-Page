@@ -35,8 +35,8 @@ This project was built for learning purposes to:
 
 1. Clone the repository and install the required npm packages:
    ```bash
-   git clone https://github.com/your-username/login-learning.git
-   cd login-learning
+   git clone https://github.com/Abhinav2374/Login-Page.git
+   cd Login-Page
    npm install
 
 2. Run the Apllication
