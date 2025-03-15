@@ -4,6 +4,8 @@ const password_error = document.getElementById("password_error");
 
 SignUp.addEventListener("click", (e) => {
   e.preventDefault();
+  username_error.textContent = "";
+  password_error.textContent = "";
   let has_error = false;
   const usernamevalue = document.getElementById("username").value;
   const passwordvalue = document.getElementById("password").value;
@@ -11,6 +13,8 @@ SignUp.addEventListener("click", (e) => {
 
   if (usernamevalue.length < 8) {
     username_error.style.display = "block";
+    username_error.textContent =
+      "The username must contain atleast 8 characters!";
     if (usernamevalue.length == 0) {
       username_error.textContent = "Please enter the username!";
     }
@@ -20,6 +24,8 @@ SignUp.addEventListener("click", (e) => {
   }
   if (passwordvalue.length < 8) {
     password_error.style.display = "block";
+    password_error.textContent =
+      "The password must contain atleast 8 characters!";
     if (passwordvalue.length == 0) {
       password_error.textContent = "Please enter the password!";
     }

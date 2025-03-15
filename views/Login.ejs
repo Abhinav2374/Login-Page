@@ -16,16 +16,23 @@
         >The username must contain atleast 8 characters!</span
       >
       <br />
-      <label id="Password1">Password:</label> <br />
-      <input id="password" type="password" placeholder="Enter your password" />
+      <label class="passwordLabel" id="Password1">Password:</label> <br />
+      <input
+        class="passwordInput"
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+      />
       <span id="password_error" class="error"
         >The password must contain atleast 8 characters!</span
       >
       <br />
       <input id="remember" type="checkbox" />
       <label for="remember me"> Remember</label> <br />
-      <a id="signUp" href="/signup">dont have an account? sign up</a>
-      <input id="login" type="submit" value="Login" />
+      <a clss="links" id="signUpLink" href="/signup"
+        >dont have an account? sign up</a
+      >
+      <input class="buttons" id="login" type="submit" value="Login" />
     </div>
     <script src="login.js"></script>
   </body>

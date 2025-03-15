@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="signUp.css" />
+    <link rel="stylesheet" href="Login.css" />
     <title>Login</title>
   </head>
 
@@ -12,23 +12,28 @@
       <h1 id="h1">Login Form</h1>
       <label id="Username1"> Username: </label> <br />
       <input id="username" placeholder="Enter your username" required /> <br />
-      <span id="username_error" class="error"
-        >The username must contain atleast 8 characters!</span
-      >
-      <label id="Password1">Password:</label> <br />
-      <input id="password" type="password" placeholder="Enter your password" />
-      <label id="Password2">Confirm Password:</label> <br />
+      <span id="username_error" class="error"></span>
+      <label class="passwordLabel" id="Password1">Password:</label> <br />
       <input
+        class="passwordInput"
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+      />
+      <label class="passwordLabel" id="Password2">Confirm Password:</label>
+      <br />
+      <input
+        class="passwordInput"
         id="confirmPassword"
         type="password"
         placeholder="Confirm your password"
       />
-      <span id="password_error" class="error"
-        >The password must contain atleast 8 characters!</span
-      >
+      <span id="password_error" class="error"></span>
       <br />
-      <a id="signIn" href="/">already have an account? sign in</a>
-      <input id="SignUp" type="submit" value="Sign Up" />
+      <a class="links" id="signInLink" href="/"
+        >already have an account? sign in</a
+      >
+      <input class="buttons" id="SignUp" type="submit" value="Sign Up" />
     </div>
     <script src="signUp.js"></script>
   </body>

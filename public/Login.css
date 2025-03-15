@@ -1,6 +1,6 @@
 #box {
   background-color: rgb(244, 241, 241);
-  height: 450px;
+  height: 540px;
   width: 660px;
   margin-left: 475px;
   margin-top: 100px;
@@ -32,7 +32,7 @@ h1 {
   border: 2px solid rgb(235, 232, 232);
 }
 
-#Password1 {
+.passwordLabel {
   margin-top: 20px;
   font-family: sans-serif;
   margin-left: 30px;
@@ -41,7 +41,7 @@ h1 {
   font-size: 20px;
 }
 
-#password {
+.passwordInput {
   margin-top: 5px;
   height: 43px;
   width: 595px;
@@ -67,13 +67,34 @@ h1 {
   border: 2px solid rgb(235, 232, 232);
 }
 
+#SignUp {
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 43px;
+  width: 595px;
+  border-radius: 4px;
+  color: white;
+  background-color: #1e7cff;
+  border: 2px solid rgb(235, 232, 232);
+}
+
 .error {
   color: red;
   margin-left: 30px;
   display: none;
 }
 
-#signUp {
+#signUpLink {
+  position: relative;
+  text-decoration: none;
+  margin-left: 30px;
+  top: 10px;
+  color: #1e7cff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+#signInLink {
   position: relative;
   text-decoration: none;
   margin-left: 30px;
